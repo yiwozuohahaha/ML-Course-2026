@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扫雷游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>扫雷游戏</h1>
+            <div class="game-info">
+                <div class="info-item">
+                    <span class="label">地雷数:</span>
+                    <span id="mine-count">10</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">剩余标记:</span>
+                    <span id="flag-count">10</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">时间:</span>
+                    <span id="timer">000</span>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="controls">
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn active" data-level="easy">简单</button>
+                    <button class="difficulty-btn" data-level="medium">中等</button>
+                    <button class="difficulty-btn" data-level="hard">困难</button>
+                </div>
+                <button id="restart-btn" class="restart-btn">重新开始</button>
+            </div>
+            
+            <div id="game-board" class="game-board"></div>
+            
+            <div id="game-message" class="game-message hidden">
+                <div class="message-content">
+                    <h2 id="message-title"></h2>
+                    <p id="message-text"></p>
+                    <button id="message-restart-btn" class="restart-btn">再玩一次</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="instructions">
+                <h3>游戏说明:</h3>
+                <ul>
+                    <li>左键点击揭开格子</li>
+                    <li>右键点击标记/取消标记地雷</li>
+                    <li>数字表示周围8个格子中地雷的数量</li>
+                    <li>标记所有地雷并揭开所有安全格子即可获胜</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
