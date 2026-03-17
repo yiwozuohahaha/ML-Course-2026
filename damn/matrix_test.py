@@ -2,7 +2,7 @@ import torch
 
 import numpy as np
 import matplotlib.pyplot as plt
-
+import scipy
 
 print(f"PyTorch 版本: {torch.__version__}")
 print(f"CUDA 是否可用: {torch.cuda.is_available()}")
